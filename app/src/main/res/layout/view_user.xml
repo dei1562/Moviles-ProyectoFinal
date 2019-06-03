@@ -30,7 +30,7 @@
         android:layout_toRightOf="@id/c_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_name"/>
+        android:id="@+id/tv_title"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_below="@id/c_name"/>
 
     <TextView
-        android:layout_below="@id/tv_name"
+        android:layout_below="@id/tv_title"
         android:layout_toRightOf="@id/c_uname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

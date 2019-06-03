@@ -14,8 +14,6 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 public class ViewUser extends AppCompatActivity implements View.OnClickListener {
 
     String id, hold_name;
@@ -50,7 +48,7 @@ public class ViewUser extends AppCompatActivity implements View.OnClickListener 
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
 
-        tv_name = (TextView) findViewById(R.id.tv_name);
+        tv_name = (TextView) findViewById(R.id.tv_title);
         tv_username = (TextView) findViewById(R.id.tv_username);
         tv_password = (TextView) findViewById(R.id.tv_password);
     }
@@ -97,9 +95,9 @@ public class ViewUser extends AppCompatActivity implements View.OnClickListener 
             JSONArray result = jsonObject.getJSONArray(Config.TAG_ARRAY);
             JSONObject js = result.getJSONObject(0);
 
-            String name = js.getString(Config.TAG_NAME);
-            String username = js.getString(Config.TAG_UNAME);
-            String password = js.getString(Config.TAG_PASS);
+            String name = js.getString(Config.TAG_TITLE);
+            String username = js.getString(Config.TAG_ABSTRACT);
+            String password = js.getString(Config.TAG_URL);
 
             tv_name.setText(name);
             tv_username.setText(username);

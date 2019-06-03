@@ -72,9 +72,11 @@ public class ViewAllUser extends AppCompatActivity {
                 JSONObject j = result.getJSONObject(i);
                 User user = new User();
                 user.setId(j.optString(Config.TAG_ID));
-                user.setName(j.optString(Config.TAG_NAME));
-                user.setUname(j.optString(Config.TAG_UNAME));
-                user.setPass(j.optString(Config.TAG_PASS));
+                user.setTitle(j.optString(Config.TAG_TITLE));
+                user.setResumen(j.optString(Config.TAG_ABSTRACT));
+                user.setUrl(j.optString(Config.TAG_URL));
+                user.setType(j.optString(Config.TAG_TYPE));
+                user.setViews(j.optString(Config.TAG_VIEWS));
 
                 userList.add(user);
             }

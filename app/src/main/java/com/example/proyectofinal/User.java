@@ -3,9 +3,11 @@ package com.example.proyectofinal;
 public class User {
 
     public String id;
-    public String name;
-    public String uname;
-    public String pass;
+    public String title;
+    public String resumen;
+    public String url;
+    public String type;
+    public String views;
 
     public String getId() {
         return id;
@@ -15,27 +17,43 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getUname() {
-        return uname;
+    public String getResumen() {
+        return resumen;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public void setResumen(String resumen) {
+        this.resumen = resumen;
     }
 
-    public String getPass() {
-        return pass;
+    public String getUrl() {
+        return url;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getViews() {
+        return views;
+    }
+
+    public void setViews(String views) {
+        this.views = views;
     }
 }
