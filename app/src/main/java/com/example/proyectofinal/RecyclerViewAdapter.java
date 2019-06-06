@@ -7,7 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -24,6 +27,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView id, title, resumen, url, type, views;
         CardView cardView;
+        ImageView image;
 
         public ViewHolder(final View itemView) {
             super(itemView);
@@ -34,6 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             url = (TextView) itemView.findViewById(R.id.tv_url);
             type = (TextView) itemView.findViewById(R.id.tv_type);
             views = (TextView) itemView.findViewById(R.id.tv_views);
+            image = (ImageView) itemView.findViewById(R.id.avatar);
 
             /*cardView.setOnClickListener(new View.OnClickListener() {
 
@@ -61,12 +66,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         String url = userList.get(position).getUrl();
         String type = "Type: ".concat(userList.get(position).getType());
         String views = "Views: ".concat(userList.get(position).getViews());
+        String avatar = userList.get(position).getAvatar();
         holder.id.setText(id);
         holder.title.setText(title);
         holder.resumen.setText(resumen);
         holder.url.setText(url);
         holder.type.setText(type);
         holder.views.setText(views);
+
+        Picasso.get().load(avatar).into(holder.image);
     }
 
     @Override

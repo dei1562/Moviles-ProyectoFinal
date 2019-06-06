@@ -2,8 +2,8 @@ package com.example.proyectofinal;
 
 public class Config {
 
-    public static final String URL_Display = "https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=k4anUu450QKtswp7flGEziNSjbGAoxtZ";
-    public static final String URL_GetUser = "https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=k4anUu450QKtswp7flGEziNSjbGAoxtZ";
+    public static final String URL_Display = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=k4anUu450QKtswp7flGEziNSjbGAoxtZ";
+    public static final String URL_GetUser = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=k4anUu450QKtswp7flGEziNSjbGAoxtZ";
 
     // keys for send and request script
     public static final String KEY_ID = "id";

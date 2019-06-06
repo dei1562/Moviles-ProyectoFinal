@@ -78,6 +78,14 @@ public class ViewAllUser extends AppCompatActivity {
                 user.setType(j.optString(Config.TAG_TYPE));
                 user.setViews(j.optString(Config.TAG_VIEWS));
 
+                JSONArray media = j.getJSONArray("media");
+                JSONObject objectMedia = media.getJSONObject(0);
+
+                JSONArray mediaMetadata = objectMedia.getJSONArray("media-metadata");
+                JSONObject objectMediaMetadata = mediaMetadata.getJSONObject(2);
+
+                user.setAvatar(objectMediaMetadata.optString("url"));
+
                 userList.add(user);
             }
         } catch (Exception e) {
